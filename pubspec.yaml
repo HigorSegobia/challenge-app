@@ -42,6 +42,12 @@ flutter:
 
   assets:
     - images/carrinho.png
+    - images/back.jpeg
+
+fonts:
+    - family: Roboto
+      fonts:
+          - asset: fonts/Roboto-Medium.ttf
 
 
   # To add assets to your application, add an assets section, like this:

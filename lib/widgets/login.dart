@@ -12,7 +12,7 @@ class _LoginState extends State<Login> {
    
     return Scaffold(
       
-      backgroundColor: Colors.blue[200],
+      backgroundColor: Color(0xFF89A6F8),
       body:Padding(
         padding: const EdgeInsets.all(10.0),
         child:Center(
@@ -33,13 +33,11 @@ class _LoginState extends State<Login> {
             keyboardType: TextInputType.text,
             style: TextStyle(color: Colors.black, fontSize: 20),
             decoration: InputDecoration(
+              fillColor: Colors.grey[200],
               prefixIcon: Icon(Icons.people),
               labelText: "Usuario",
               labelStyle: TextStyle(color: Colors.white),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.white,width: 1),
-              ),
+             
               ),),
             TextField(
             autofocus: false,
@@ -50,10 +48,7 @@ class _LoginState extends State<Login> {
               prefixIcon: Icon(Icons.lock),
               labelText: "Senha",
               labelStyle: TextStyle(color: Colors.white),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.white,width: 1),
-              ),
+              
             ),
           ),
           ButtonTheme(

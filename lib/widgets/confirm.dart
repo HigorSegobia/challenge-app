@@ -13,44 +13,45 @@ class _ConfirmState extends State<Confirm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[200],
+      backgroundColor: Color(0xFF89A6F8),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          height: 500,
-          margin: EdgeInsets.only(top:50.0),
-          decoration: 
-            new BoxDecoration(color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(20))),
+        
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                alignment: Alignment.topCenter,
-                child: Text('Valor Total do Pedido',
-                style: TextStyle(fontSize: 30, color: Colors.blue[200]),)
+              new Text("CARRINHO",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.w700, fontSize: 30, color:Color(0xffffffff),)),
+            new Container(
+              height:383.00,
+              width:310.00,
+              alignment: Alignment.topCenter,
+              decoration:BoxDecoration(
+                color: Color(0xffffffff), borderRadius: BorderRadius.circular(10.00)
               ),
-
-              Container(
-                padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.only(top:20.0),
-                alignment: Alignment.topCenter,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  border: Border.all(
-                  width: 2,
-                  color: Colors.blue[300],
-                  
-                )),
-                child: Text('R\$20,00',
-                style: TextStyle(
-                  fontSize: 25, color: Colors.blue[200], fontWeight: FontWeight.bold
-                ),),
-              ),
-
-              Container(
+              child: new Column(
+              children:[ 
+                new Container(
+              margin: const EdgeInsets.only(top:10.0),
+              padding: EdgeInsets.only(top:8.0, left: 10.0, right: 10.0, bottom: 6.0),
+              height:39.00,
+              width: 370.00,
+              decoration: BoxDecoration(color: Color(0xfff4f4f5), borderRadius: BorderRadius.only(topRight:Radius.circular(10.00), bottomLeft:Radius.circular(10.00),),),
+              child: new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children:[
+                  new Text('PEDIDO #01',
+              style: TextStyle(fontSize: 20, color: Color(0xff000000), fontFamily: 'Roboto'),),
+            
+                  new Text(r'R$20,00',
+              style: TextStyle(fontSize: 20, color: Color(0xff000000), fontFamily: 'Roboto'))
+            ]
+            )),
+              ]),),
+               Container(
                 alignment:Alignment.topCenter,
                 child: ButtonTheme(
                   padding: EdgeInsets.all(15.0),
@@ -65,18 +66,14 @@ class _ConfirmState extends State<Confirm> {
                     elevation: 4.0,
                     shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
                     child: Text(
-                      "Realizar Pagamento",
-                      style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                      "CONFIRMAR PAGAMENTO",
+                      style: TextStyle(color: Color(0xff000000),fontFamily: 'Roboto', fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    color:Colors.blue[200],
+                    color:Color(0xfff4f4f5),
             ),),
           ) ,
               )
             ],
-          ),
-        ),
-      ),
-      )
-    );
+          ),),),);
   }
 }
